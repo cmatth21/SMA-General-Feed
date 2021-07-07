@@ -375,7 +375,7 @@ main {
   grid-area: content3;
 }
 .comm1 {
-  flex-grow: 1;
+  height: 38px;
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -395,7 +395,7 @@ main {
   font-family: "Roboto", sans-serif;
 }
 .comm5 {
-  flex-grow: 1;
+  flex-grow: 2;
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -405,7 +405,7 @@ main {
   font-family: "Roboto", sans-serif;
 }
 .comm7 {
-  flex-grow: 1;
+  height: 38px;
   background-color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -418,23 +418,23 @@ main {
   color: black;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 15px;
-  margin-left: 18px;
+  font-size: 14px;
+  padding-left: 18px;
 }
 
 .comm2 a {
   text-decoration: none;
   color: black;
-  margin-left: 18px;
-  font-size: 18px;
+  padding-left: 18px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-top: 10px;
 }
 .comm2 p {
-  margin-left: 18px;
+  padding-left: 18px;
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .follow-btn button {
   height: 22px;
@@ -454,7 +454,7 @@ main {
   text-decoration: none;
   color: black;
   margin-left: 18px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-top: 10px;
@@ -462,14 +462,14 @@ main {
 .comm3 p {
   margin-left: 18px;
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .comm4 a {
   text-decoration: none;
   color: black;
-  margin-left: 18px;
-  font-size: 18px;
+  margin-left: 16px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-top: 10px;
@@ -477,14 +477,14 @@ main {
 .comm4 p {
   margin-left: 18px;
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .comm5 a {
   text-decoration: none;
   color: black;
   margin-left: 18px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-top: 10px;
@@ -492,14 +492,14 @@ main {
 .comm5 p {
   margin-left: 18px;
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .comm6 a {
   text-decoration: none;
   color: black;
   margin-left: 18px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-top: 10px;
@@ -507,12 +507,12 @@ main {
 .comm6 p {
   margin-left: 18px;
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .follow-x a {
   padding-left: 15px;
   margin-top: -22px;
-  margin-left: 17.5em;
+  margin-left: 19.5em;
   color: #ff5b39;
 }
 
@@ -536,4 +536,20 @@ footer a {
 }
 footer p {
   margin-left: 8px;
+}
+/* Responsiveness */
+@media screen and (max-width:880px){
+    body{
+        margin: 0;
+        padding:0;
+    }
+    .container{
+        display: block;
+    }
+    nav #sidenav .profile-box{
+        max-width: 100%;
+    }
+    .profile-box .new-comment{
+        width: 70%;
+    }
 }
