@@ -111,45 +111,45 @@ nav {
   align-content: center;
 }
 /* Nav Bar Profile Box */
-.profilepicsmall img {
-  grid-area: a;
-  height: 55px;
+#sidenav .profile_content{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Montserrat", sans-serif;
   width: 100%;
 }
-.profile-box .user-info a {
-  grid-area: b;
-  font-weight: 700;
+#sidenav .profile_content .profile{
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+}
+.profile_content .profile .profile_details{
+  display: flex;
+  align-items: center;
+}
+.profile .profile_details img{
+  height: 50px;
+  width: 45px;
+  object-fit: cover;
+  padding-left: 30px;
+}
+.profile .profile_details .name_job{
+  margin-left: 10px;
+}
+.profile .profile_details .name{
   font-size: 14px;
-  text-decoration: none;
-  color: black;
-  margin-top: 50px;
-  margin-left: 5px;
+  font-weight: 700;
 }
-.role {
-  grid-area: c;
-  font-weight: 400;
+.profile .profile_details .job{
   font-size: 12px;
-  margin-top: 0;
-  margin-left: 5px;
 }
-.ellipsis img {
-  grid-area: d;
-  margin-top: 20px;
-  margin-left: 5px;
-}
-.profile-box {
-  font-family: "Montserrat", sans-serif;
-  margin-top: 100px;
-  margin-bottom: 10px;
-  display: grid;
-  grid-template-columns: 25% 40% 35%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-    "a b d"
-    "a c d";
-  width: 78%;
-  margin-left: auto;
-  margin-right: auto;
+.profile #logout{
+  position: absolute;
+  left: 15%;
+  bottom: 25px;
+  min-width: 50px;
+  line-height: 50px;
+  color: black;
 }
 /* New Post */
 main {
@@ -537,19 +537,40 @@ footer a {
 footer p {
   margin-left: 8px;
 }
-/* Responsiveness */
-@media screen and (max-width:880px){
+/* Responsiveness  488px is second break point*/
+@media screen and (max-width:900px){
     body{
         margin: 0;
         padding:0;
     }
     .container{
         display: block;
+        width: 100%;
     }
+    /* Top Home Nav Bar */
+
+    .wrapper{
+      max-width: 70%;
+    }
+    .homesearch{
+      justify-content: space-evenly;
+      
+    }
+
+    /* Side Nav Bar */
     nav #sidenav .profile-box{
         max-width: 100%;
     }
     .profile-box .new-comment{
         width: 70%;
     }
+    #sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      #sidenav a {float: left;
+      }
+      div.content {margin-left: 0;
+      }
 }
