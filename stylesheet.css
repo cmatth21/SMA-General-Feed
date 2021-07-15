@@ -66,6 +66,7 @@ nav {
   grid-area: sidenav;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  width: 100%;
 }
 /* Side Bar Logo */
 #sidenav .logo {
@@ -74,7 +75,7 @@ nav {
   margin-right: auto;
   padding-top: 10px;
 }
-/* Side Bar Menu Needs Attn */
+/* Side Bar Menu */
 #sidenav .icons a i {
   height: 20px;
   display: inline;
@@ -112,16 +113,18 @@ nav {
 }
 /* Nav Bar Profile Box */
 #sidenav .profile_content{
-  position:absolute;
+  /* position:absolute;
   bottom: 0;
-  left: 0;
+  left: 0; */
   font-family: "Montserrat", sans-serif;
   width: 100%;
 }
 #sidenav .profile_content .profile{
-  position: relative;
-  padding: 10px 6px;
+  /* position: relative;
+  padding: 10px 6px; */
   height: 60px;
+  padding-top: 100px;
+  padding-left: 30px;
 }
 .profile_content .profile .profile_details{
   display: flex;
@@ -144,16 +147,14 @@ nav {
   font-size: 12px;
 }
 .profile #logout{
-  position: absolute;
-  left: 15%;
-  bottom: 25px;
+  padding-left: 50px;
   min-width: 50px;
-  line-height: 50px;
   color: black;
 }
 /* New Post */
 main {
   background-color: white;
+  grid-area: main;
 }
 .new-comment {
   display: flex;
@@ -171,7 +172,7 @@ main {
 .postform form .newmessage {
   resize: none;
   height: 75px;
-  width: 30rem;
+  max-width: 30rem;
   margin-top: 5px;
   margin-left: 2px;
   border-color: transparent;
@@ -276,9 +277,15 @@ main {
   margin-top: -8px;
   margin-bottom: 4px;
 }
-.feedicons i {
-  margin-right: 130px;
+.feedicons a i {
+  margin-right: 5px;
 }
+.feedicons a{
+  margin-right: 115px;
+  color: black;
+  text-decoration: none;
+}
+
 /* Latest Posts */
 #content2 {
   grid-area: content2;
@@ -330,6 +337,11 @@ main {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
+}
+.lp-icon span{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .lp2 {
@@ -537,15 +549,19 @@ footer a {
 footer p {
   margin-left: 8px;
 }
-/* Responsiveness  488px is second break point*/
-@media screen and (max-width:900px){
+/* Responsiveness*/
+@media screen and (max-width:1207px){
     body{
-        margin: 0;
+        margin: auto;
         padding:0;
+        max-width: 100%;
     }
     .container{
-        display: block;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
     /* Top Home Nav Bar */
 
@@ -554,23 +570,69 @@ footer p {
     }
     .homesearch{
       justify-content: space-evenly;
-      
     }
+    /* Side Nav disappears when screen smaller */
+    #sidenav{
+      display:none;
+    }
+    /* Horizontal Nav */
+    #navhor{
+      background-color: white;
+      padding-bottom: 5px;
+    }
+    #navhor img{
+      display: block;
+      margin: 0 auto;
+    }
+   
+    #navhor .icons a{
+      color: black;
+      text-decoration: none;
+      padding-right: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+    }
+    #navhor .icons a:hover{
+      color: #53b6e0;
 
-    /* Side Nav Bar */
-    nav #sidenav .profile-box{
-        max-width: 100%;
     }
-    .profile-box .new-comment{
-        width: 70%;
+    #navhor .icons a i{
+      margin-right: 5px;
     }
-    #sidenav {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-      #sidenav a {float: left;
-      }
-      div.content {margin-left: 0;
-      }
+    /* User New Comment */
+    main{
+      max-width: 100%;
+    }
+    .iconsbutton{
+      padding-bottom: 10px ;
+    }
+    .postbutton{
+      margin-left: 80px;
+    }
+    /* Latest Posts */
+    .lp-icon{
+      padding-left: 200px;
+      padding-bottom: 5px;
+    }
+    /* Communities */
+    .comm2{
+      height: 42px;
+    }
+    .comm3{
+      height: 42px;
+    }
+    .comm4{
+      height: 42px;
+    }
+    .comm5{
+      height: 42px;
+    }
+    .comm6{
+      height: 42px;
+    }
+    
+
+    
+ 
+
 }
