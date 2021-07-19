@@ -282,7 +282,7 @@ body{
 .message a img{
     position: absolute;
     right: 28px;
-    bottom: 3px;
+    bottom: 57px;
 }
 /* Bottom Nav */
 .bottom_nav_icons{
@@ -308,5 +308,4 @@ body{
     .nav .nav__toggle{
         display: none;
     }
-    
 }
