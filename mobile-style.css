@@ -9,12 +9,15 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 /* Nav Bar */
-.nav{
+.nav_mobile{
     background-color: white;
-    max-width: 80%;
+    max-width: 100%;
+    border-bottom: 2px solid #CCCCCC;
+
 }
 
 .nav__toggle{
@@ -25,7 +28,7 @@ body{
 }
 #close{
     padding-top: 3px;
-    padding-left: 1050px;
+    padding-left: 400px;
     color: #CCCCCC;
     display: none;
 }
@@ -104,6 +107,7 @@ body{
     flex-direction: column;
     padding-left: 16px;
     padding-top: 16px;
+    padding-bottom: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -124,4 +128,185 @@ body{
 }
 #nav__checkbox:checked ~ .Logo{
     display: none;
+}
+/* Main */
+
+.friends_tl{
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #CCCCCC;
+    justify-content: space-around;
+}
+.friend1 a #add_btn{
+    position: absolute;
+    border: none;
+    height: 20px;
+    top: 35px;
+    left: 41px;
+}
+.friends_tl img {
+    height: 35px;
+    border: 1px solid #53B6E0;
+    border-radius: 5px;
+}
+.friends_tl a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+.friend1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend5{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend6{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend7{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+/* Feed */
+.feed{
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+.pp-username-time {
+    display: flex;
+  }
+  .feed1pp a img {
+    height: 35.54px;
+    padding-left: 42px;
+    padding-top:18px;
+  }
+  .feed-username a {
+    
+    padding-left: 8px;
+    display: block;
+    padding-top: 18px;
+
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .message{
+      padding-top: 8px;
+      margin-left: 60px;
+    margin-top: -40px;
+  }
+  .message p {
+    padding-left: 26px;
+    font-size: 12px;
+    font-weight: 400;
+    
+  }
+  /* how to keep time from shifting due to username??? */
+  .timesincepost {
+    padding-left: 77px;
+    padding-top: 17px;
+    font-weight: 300;
+    font-size: 12px;
+    
+  }
+  .dbl-ellipsis {
+    padding-left: 220px;
+    padding-top: 15px;
+    height: 14px;
+  }
+  
+  
+  .feedicons {
+    margin-left: 90px;
+    margin-top: 20px;
+    padding-bottom: 8px;
+  }
+  .feedicons a i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .feedicons a{
+    padding-right: 65px;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  #feed1{
+      border-bottom: 2px solid #CCCCCC;
+  }
+  #feed2{
+    border-bottom: 2px solid #CCCCCC;
+}
+#feed3{
+    border-bottom: 2px solid #CCCCCC;
+}
+#feed4{
+    border-bottom: 7px solid #CCCCCC;
+}
+/* Add Message Button */
+.message a img{
+    position: absolute;
+    right: 28px;
+    bottom: 3px;
+}
+/* Bottom Nav */
+.bottom_nav_icons{
+    list-style: none;
+    display: flex;
+    font-size: 30px;
+    margin-top: -5px;
+    margin-left: 0;
+    padding-top:  10px;
+    padding-left: 0;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.bottom_nav_icons li a{
+    color: black;
+}
+.bottom_nav_icons li a i:hover{
+    color: #53b6e0;
+}
+/* Desktop Responsivess */
+@media only screen and (min-width:560px){
+    .nav .nav__toggle{
+        display: none;
+    }
+    
 }

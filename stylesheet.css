@@ -36,6 +36,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding-right: 48px;
+  background-color: white;
 }
 /* Search Bar */
 .wrapper {
@@ -147,7 +148,7 @@ nav {
   font-size: 12px;
 }
 .profile #logout{
-  padding-left: 50px;
+  padding-left: 30px;
   min-width: 50px;
   color: black;
 }
@@ -181,7 +182,6 @@ main {
 .comment-icons {
   grid-area: "icons";
   height: 10px;
-  margin-right: 50px;
   margin-left: 50px;
 }
 .comment-icons a {
@@ -631,8 +631,12 @@ footer p {
       height: 42px;
     }
     
-
-    
- 
-
+}
+@media screen and (min-width:1208px){
+  #navhor{
+    display: none;
+  }
+  .wrapper{
+    max-width: 100%;
+  }
 }
