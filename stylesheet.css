@@ -549,8 +549,18 @@ footer a {
 footer p {
   margin-left: 8px;
 }
-/* Responsiveness*/
-@media screen and (max-width:1207px){
+.mobile_view{
+  display: none;
+}
+  #navhor{
+    display: none;
+  }
+
+/* Responsiveness for Desktop View*/
+@media screen and (max-width: 1207px){
+  .mobile_view{
+    display: none;
+  }
     body{
         margin: auto;
         padding:0;
@@ -559,9 +569,10 @@ footer p {
     .container{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
+        
     }
     /* Top Home Nav Bar */
 
@@ -577,6 +588,8 @@ footer p {
     }
     /* Horizontal Nav */
     #navhor{
+      display: flex;
+      flex-direction: column;
       background-color: white;
       padding-bottom: 5px;
     }
@@ -584,13 +597,18 @@ footer p {
       display: block;
       margin: 0 auto;
     }
-   
+    #navhor .icons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     #navhor .icons a{
       color: black;
       text-decoration: none;
       padding-right: 10px;
       font-family: 'Montserrat', sans-serif;
       font-size: 15px;
+      
     }
     #navhor .icons a:hover{
       color: #53b6e0;
@@ -600,9 +618,7 @@ footer p {
       margin-right: 5px;
     }
     /* User New Comment */
-    main{
-      max-width: 100%;
-    }
+  
     .iconsbutton{
       padding-bottom: 10px ;
     }
@@ -632,11 +648,330 @@ footer p {
     }
     
 }
-@media screen and (min-width:1208px){
-  #navhor{
+
+/* Mobile Responsiveness */
+@media only screen and (min-width:560px){
+  .nav .nav__toggle{
+      display: none;
+  }
+}
+@media only screen and (max-width:560px){
+  .container{
     display: none;
   }
-  .wrapper{
-    max-width: 100%;
+  .mobile_view{
+    display: contents;
   }
+  body #main_mobile{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #cccccc
+}
+/* Logo */
+.Logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Nav Bar */
+.nav_mobile{
+    background-color: white;
+    max-width: 100%;
+    border-bottom: 2px solid #CCCCCC;
+
+}
+
+.nav__toggle{
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    left: 0;
+}
+#close{
+    padding-top: 3px;
+    padding-left: 400px;
+    color: #CCCCCC;
+    display: none;
+}
+.open{
+    margin-top: 10px;
+}
+#nav__checkbox{
+    display: none;
+}
+.menuitems{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.profilepic{
+    height: 60px;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+.menuitems .profile .name_job{
+    padding-left: 16px;
+    padding-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.menuitems .profile .name_job .name{
+    font-weight: 700;
+    font-size: 12px;
+}
+.menuitems .profile .name_job .job{
+    font-weight: 400;
+    font-size: 10px;
+}
+.follows{
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+.follows a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.follows span{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.profile{
+    border-bottom: 2px solid #CCCCCC;
+}
+.navlist .nav__menu{
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.navlist{
+    border-bottom: 2px solid #CCCCCC ;
+}
+.navlist .nav__menu li{
+    list-style: none;
+}
+.navlist .nav__menu li i{
+    padding-right: 12px;
+}
+.navlist .nav__menu li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.settings_help{
+    border-bottom: 2px solid #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 16px;
+}
+.settings_help a{
+    text-decoration: none;
+    color: black;
+}
+#nav__checkbox:checked ~ .menuitems{
+    display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle #close{
+    display: block;
+
+}
+#nav__checkbox:checked ~ label.nav__toggle .open{
+    display: none;
+    
+}
+#nav__checkbox:checked ~ .Logo{
+    display: none;
+    
+}
+/* Main */
+
+.friends_tl{
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #CCCCCC;
+    justify-content: space-around;
+}
+.friend1 a #add_btn{
+    position: absolute;
+    border: none;
+    height: 20px;
+    top: 35px;
+    left: 41px;
+}
+.friends_tl img {
+    height: 35px;
+    border: 1px solid #53B6E0;
+    border-radius: 5px;
+}
+.friends_tl a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+.friend1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend5{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend6{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+.friend7{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+/* Feed */
+.feed{
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+.pp-username-time {
+    display: flex;
+  }
+  .feed1pp a img {
+    height: 35.54px;
+    padding-left: 42px;
+    padding-top:18px;
+  }
+  #main_mobile .feed1 .feed-username-mobile a {
+    
+    
+    display: block;
+    padding-top: 26px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .message-mobile{
+     padding-left: 10px;
+      margin-left: 60px;
+    margin-top: -37px;
+  }
+  .message-mobile p {
+    padding-left: 27px;
+    font-size: 12px;
+    font-weight: 400;
+    
+  }
+  /* how to keep time from shifting due to username??? */
+  .timesincepost {
+    padding-left: 77px;
+    padding-top: 30px;
+    font-weight: 300;
+    font-size: 12px;
+    
+  }
+  .dbl-ellipsis-mobile {
+    padding-left: 125px;
+    padding-top: 26px;
+    height: 14px;
+  }
+  
+  
+  #main_mobile .feedicons {
+    margin-left: 97px;
+    margin-top: 12px;
+    padding-bottom: 8px;
+  }
+  #main_mobile .feedicons a i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  #main_mobile .feedicons a{
+    padding-right: 11px;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  #main_mobile .feedicons_numbers{
+    margin-right: 60px;
+  }
+  #feed1{
+      border-bottom: 2px solid #CCCCCC;
+  }
+  #feed2{
+    border-bottom: 2px solid #CCCCCC;
+}
+#feed3{
+    border-bottom: 2px solid #CCCCCC;
+}
+#feed4{
+    border-bottom: 7px solid #CCCCCC;
+}
+/* Add Message Button */
+.message-mobile a img{
+    position: absolute;
+    right: 28px;
+    bottom: 57px;
+}
+/* Bottom Nav */
+.bottom_nav_icons{
+    list-style: none;
+    display: flex;
+    font-size: 30px;
+    margin-top: -5px;
+    margin-left: 0;
+    padding-top:  10px;
+    padding-left: 0;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.bottom_nav_icons li a{
+    color: black;
+}
+.bottom_nav_icons li a i:hover{
+    color: #53b6e0;
+}
+ 
 }
